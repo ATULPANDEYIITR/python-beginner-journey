@@ -12,9 +12,16 @@ from the fundamentals to practical projects.
 - Explore Data Science
 - Explore AI and Machine Learning
 
-## Day 1
+## Day 1 - First program
 
 Created my first Python program.
 
 ```python
 print("Hello, GitHub!")
+print("This is my first Python project.")
+print("Day 1 of my coding journey.")
+
+### Day 2 - Variables
+- Learned what variables are
+- Stored text and numbers in variables
+- Used variables with `print()`
