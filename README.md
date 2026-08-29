@@ -21,7 +21,10 @@ print("Hello, GitHub!")
 print("This is my first Python project.")
 print("Day 1 of my coding journey.")
 
-### Day 2 - Variables
+## Day 2 - Variables
+
+### What I learned
+
 - Learned what variables are
 - Stored text and numbers in variables
 - Used variables with `print()`
