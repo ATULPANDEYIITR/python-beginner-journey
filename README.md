@@ -29,3 +29,14 @@ print("Day 1 of my coding journey.")
 - Learned what variables are
 - Stored text and numbers in variables
 - Used variables with `print()`
+
+## Day 3 - Data Types
+
+### What I learned
+
+- Learned about the `str` data type for storing text.
+- Learned about the `int` data type for storing whole numbers.
+- Learned about the `float` data type for storing decimal numbers.
+- Learned about the `bool` data type for storing `True` or `False` values.
+- Used the `type()` function to identify the data type of variables.
+- Performed simple operations using different data types.
