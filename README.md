@@ -41,7 +41,7 @@ print("Day 1 of my coding journey.")
 - Used the `type()` function to identify the data type of variables.
 - Performed simple operations using different data types.
 
-# Day 4: Python Operators
+## Day 4: Python Operators
 
 ## Goal
 
