@@ -1,4 +1,4 @@
-# Day 4: Python Arithmetic Operators
+# Day 0: Python Arithmetic Operators
 
 # Taking input from the user
 num1 = float(input("Enter the first number: "))
