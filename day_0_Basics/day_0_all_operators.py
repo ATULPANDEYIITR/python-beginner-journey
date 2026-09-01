@@ -1,4 +1,4 @@
-# Day 4: Python Operators
+# Day 0: Python Operators
 # This program demonstrates Arithmetic, Comparison, Assignment,
 # Logical, Membership, and Identity Operators.
 
