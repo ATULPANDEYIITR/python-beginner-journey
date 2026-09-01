@@ -1,4 +1,4 @@
-## Day 3 - Data Types
+## Day 0 - Data Types
 
 ## Personal information
 
