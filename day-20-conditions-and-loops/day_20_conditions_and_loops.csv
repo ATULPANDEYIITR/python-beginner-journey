@@ -1,0 +1,6 @@
+id,customer,amount,category
+1,Alice,120.0,Electronics
+2,Bob,-50.0,Books
+3,Charlie,600.0,Electronics
+4,David,50.0,Groceries
+5,Eve,200.0,Books

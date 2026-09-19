@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', Roboto, sans-serif; font-size: 24px; font-weight: bold; fill: #1e293b; }
+      .subtitle { font-family: 'Segoe UI', Roboto, sans-serif; font-size: 14px; fill: #64748b; }
+      .node-rect { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 8; }
+      .node-decision { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; }
+      .node-action { fill: #e0f2fe; stroke: #0284c7; stroke-width: 2; rx: 6; }
+      .node-terminal { fill: #fee2e2; stroke: #ef4444; stroke-width: 2; rx: 20; }
+      .node-start { fill: #dcfce7; stroke: #22c55e; stroke-width: 2; rx: 20; }
+      .text-main { font-family: 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #0f172a; text-anchor: middle; }
+      .text-sub { font-family: 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #475569; text-anchor: middle; }
+      .arrow { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .label { font-family: 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: bold; fill: #475569; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8fafc" />
+
+  <!-- Header -->
+  <text x="40" y="50" class="title">Transaction Processor Flowchart</text>
+  <text x="40" y="75" class="subtitle">Visualizing Conditions and Loops (Day 20)</text>
+
+  <!-- Start Node -->
+  <g transform="translate(400, 40)">
+    <rect x="-60" y="0" width="120" height="40" class="node-start" />
+    <text x="0" y="24" class="text-main">Start Loop</text>
+  </g>
+  <path d="M 400,80 L 400,120" class="arrow" />
+
+  <!-- Loop Check -->
+  <g transform="translate(400, 120)">
+    <polygon points="0,0 100,30 0,60 -100,30" class="node-decision" />
+    <text x="0" y="34" class="text-main">Has More Tx?</text>
+  </g>
+  <path d="M 400,180 L 400,220" class="arrow" />
+  <text x="410" y="200" class="label">Yes</text>
+
+  <!-- Validation Condition -->
+  <g transform="translate(400, 220)">
+    <polygon points="0,0 100,30 0,60 -100,30" class="node-decision" />
+    <text x="0" y="34" class="text-main">Amount &gt; 0?</text>
+  </g>
+  <path d="M 400,280 L 400,320" class="arrow" />
+  <text x="410" y="300" class="label">Yes</text>
+
+  <!-- Skip Path (Continue) -->
+  <path d="M 300,250 L 200,250 L 200,150 L 300,150" class="arrow" />
+  <text x="220" y="240" class="label">No (continue)</text>
+
+  <!-- Budget Check Condition -->
+  <g transform="translate(400, 320)">
+    <polygon points="0,0 100,30 0,60 -100,30" class="node-decision" />
+    <text x="0" y="34" class="text-main">Within Budget?</text>
+  </g>
+  <path d="M 400,380 L 400,420" class="arrow" />
+  <text x="410" y="400" class="label">Yes</text>
+
+  <!-- Stop Path (Break) -->
+  <path d="M 500,350 L 650,350 L 650,420" class="arrow" />
+  <text x="550" y="340" class="label">No (break)</text>
+
+  <!-- Process Action -->
+  <g transform="translate(300, 420)">
+    <rect x="0" y="0" width="200" height="50" class="node-action" />
+    <text x="100" y="25" class="text-main">Apply Discount</text>
+    <text x="100" y="40" class="text-sub">Deduct from Budget</text>
+  </g>
+  <path d="M 300,445 L 200,445 L 200,150 L 300,150" class="arrow" />
+
+  <!-- End Node -->
+  <g transform="translate(590, 420)">
+    <rect x="0" y="0" width="120" height="50" class="node-terminal" />
+    <text x="60" y="30" class="text-main">End Process</text>
+  </g>
+
+  <!-- Loop End Connection -->
+  <path d="M 500,150 L 650,150 L 650,420" class="arrow" />
+  <text x="550" y="140" class="label">No More Tx</text>
+</svg>
